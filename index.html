@@ -137,17 +137,27 @@
 <button class="hidden lg:block bg-brand-blue text-white px-6 py-2.5 rounded-lg font-bold hover:translate-y-[-2px] transition-all active:scale-95 shadow-sm">
                 Request Connection
             </button>
-<button class="md:hidden p-2 text-on-surface">
-<span class="material-symbols-outlined">menu</span>
+<!-- MENU BUTTON -->
+<button onclick="toggleMenu()" class="md:hidden p-2 text-on-surface z-50">
+  <span class="material-symbols-outlined">menu</span>
 </button>
-      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg px-6 py-4 absolute top-16 left-0 w-full z-50">
 
-  <a href="index.html" class="block py-3 border-b">Home</a>
-  <a href="#packages" class="block py-3 border-b">Packages</a>
-  <a href="abousus.html" class="block py-3 border-b">About</a>
-  <a href="terms.html" class="block py-3 border-b">Services</a>
-  <a href="acontact.html" class="block py-3 text-blue-600 font-bold">Contact</a>
+<!-- MOBILE MENU BACKDROP -->
+<div id="menuOverlay"
+     class="hidden fixed inset-0 bg-black/40 z-40"
+     onclick="toggleMenu()"></div>
 
+<!-- MOBILE MENU -->
+<div id="mobileMenu"
+     class="hidden md:hidden fixed top-20 left-0 w-full bg-white shadow-lg z-50">
+
+  <a href="index.html" class="block py-3 px-6 border-b">Home</a>
+  <a href="#packages" class="block py-3 px-6 border-b">Packages</a>
+  <a href="abousus.html" class="block py-3 px-6 border-b">About</a>
+  <a href="terms.html" class="block py-3 px-6 border-b">Services</a>
+  <a href="acontact.html" class="block py-3 px-6 text-blue-600 font-bold">Contact</a>
+
+</div>
 </div>
 </div>
 </div>
