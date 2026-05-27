@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo1.jpeg">
+<title>A1 Online </title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- ================= HEADER ================= -->
+<nav class="fixed top-0 w-full bg-white/80 backdrop-blur shadow z-50">
+
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUzLVSdcmW4F46nMy1HusJifb4qhWXihAIkOTZrn7qMs89zNGmj1WbIgcOBr8zBzO9gHcM0iwy4NQS9fMOdRlvkE2nkVV2_jUojPwFezRhMLY2iLaEQRBjqqSxW5MO0douIhZJJlr0X7IwNPByduMkvZcEwkhFgUETBDqDWjDh5dQGxBHXYrqJLQq8QHDyT0_Qv9y_EMfea4ZCQI_qQye7oLOJKbx0IHFwplwv3IAQE5RPumJ1N_7iNaeoOfMjS5YHaCvvmCy17g" class="h-10 w-auto" alt="Logo">
+      <h1 class="text-xl font-bold">A1 Online</h1>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-6 font-medium">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="abousus.html" class="text-blue-600 font-bold">About</a>
+      <a href="terms.html" class="hover:text-blue-600">Services</a>
+      <a href="acontact.html" class="hover:text-blue-600">Contact</a>
+    </div>
+
+    <!-- Button -->
+    <button class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+      Get Connected
+    </button>
+
+    <!-- Mobile Button -->
+    <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-4">
+    <a href="index.html" class="block py-2">Home</a>
+    <a href="abousus.html" class="block py-2">About</a>
+    <a href="terms.html" class="block py-2">Services</a>
+    <a href="acontact.html" class="block py-2">Contact</a>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="max-w-5xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-bold mb-2">Terms of Service</h2>
+  <p class="text-gray-600">Last updated: 2026</p>
+</section>
+
+<!-- CONTENT -->
+<section class="max-w-5xl mx-auto px-6 space-y-6">
+
+  <!-- Service Agreement -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">1. Service Agreement</h3>
+    <p>We provide Fiber Internet, IPTV, FTP services, and network solutions under A1 Online. By using our service, you agree to these terms.</p>
+  </div>
+
+  <!-- User Rules -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">2. User Responsibility</h3>
+    <ul class="list-disc pl-6">
+      <li>No illegal activities allowed</li>
+      <li>No bandwidth abuse or network attacks</li>
+      <li>No unauthorized sharing of connection</li>
+    </ul>
+  </div>
+
+  <!-- Payment -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">3. Billing & Payment</h3>
+    <ul class="list-disc pl-6">
+      <li>Monthly bill must be paid on time</li>
+      <li>Late payment may cause suspension</li>
+      <li>No refund policy may apply</li>
+    </ul>
+  </div>
+
+  <!-- Performance -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">4. Speed & Performance</h3>
+    <p>Internet speed depends on location, device, and network conditions. We do not guarantee constant maximum speed.</p>
+  </div>
+
+  <!-- Suspension -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">5. Service Suspension</h3>
+    <p>Service may be suspended due to unpaid bills, abuse, or illegal activities.</p>
+  </div>
+
+  <!-- FUP -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">6. Fair Usage Policy</h3>
+    <p>Unlimited packages are subject to fair usage. Excessive usage may result in speed reduction.</p>
+  </div>
+
+  <!-- Maintenance -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">7. Maintenance</h3>
+    <p>Service may be temporarily unavailable due to maintenance or technical issues.</p>
+  </div>
+
+  <!-- Liability -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">8. Limitation of Liability</h3>
+    <p>We are not responsible for damages caused by device issues, third-party services, or external network problems.</p>
+  </div>
+
+  <!-- Changes -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold mb-2">9. Changes to Terms</h3>
+    <p>A1 Online may update these terms anytime. Users are responsible for reviewing updates.</p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white mt-10 py-6">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <p>© 2026 A1 Online. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

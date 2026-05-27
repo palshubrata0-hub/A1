@@ -1,0 +1,763 @@
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/png" href="logo1.jpeg">
+<title>A1 Online </title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#001a42",
+                    "surface-tint": "#565e74",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "on-primary-fixed": "#131b2e",
+                    "on-primary-container": "#7c839b",
+                    "on-tertiary-container": "#3980f4",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container-low": "#eff4ff",
+                    "secondary-container": "#FF9F1C",
+                    "secondary-fixed": "#3B82F6",
+                    "secondary": "#0056FF",
+                    "outline-variant": "#c6c6cd",
+                    "primary-container": "#131b2e",
+                    "tertiary-fixed": "#d8e2ff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "background": "#f8f9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary-fixed": "#001f26",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface": "#0b1c30",
+                    "primary": "#000000",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "inverse-surface": "#213145",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-container-highest": "#d3e4fe",
+                    "primary-fixed": "#dae2fd",
+                    "on-tertiary-fixed": "#001a42",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-background": "#0b1c30",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "on-secondary-container": "#000000",
+                    "surface": "#f8f9ff",
+                    "on-surface-variant": "#45464d",
+                    "tertiary": "#000000",
+                    "outline": "#76777d",
+                    "surface-container": "#e5eeff",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "stack-sm": "0.5rem",
+                    "section-gap": "8rem",
+                    "section-gap-mobile": "4rem",
+                    "stack-md": "1rem",
+                    "container-max": "1280px",
+                    "stack-lg": "2rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-xl-mobile": ["Hanken Grotesk"],
+                    "display-xl": ["Hanken Grotesk"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-xl-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 1);
+        }
+        .pricing-toggle-active {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        .brand-green { color: #2DFF55; }
+        .bg-brand-green { background-color: #2DFF55; }
+        .brand-orange { color: #FF9F1C; }
+        .bg-brand-orange { background-color: #FF9F1C; }
+        .brand-blue { color: #0056FF; }
+        .bg-brand-blue { background-color: #0056FF; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container-lowest/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<img alt="A1 Online Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUzLVSdcmW4F46nMy1HusJifb4qhWXihAIkOTZrn7qMs89zNGmj1WbIgcOBr8zBzO9gHcM0iwy4NQS9fMOdRlvkE2nkVV2_jUojPwFezRhMLY2iLaEQRBjqqSxW5MO0douIhZJJlr0X7IwNPByduMkvZcEwkhFgUETBDqDWjDh5dQGxBHXYrqJLQq8QHDyT0_Qv9y_EMfea4ZCQI_qQye7oLOJKbx0IHFwplwv3IAQE5RPumJ1N_7iNaeoOfMjS5YHaCvvmCy17g"/>
+</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="text-secondary dark:text-secondary-fixed font-semibold border-b-2 border-secondary dark:border-secondary-fixed pb-1 font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#packages">Packages</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="abousus.html">About</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="terms.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="acontact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-brand-blue text-white px-6 py-2.5 rounded-lg font-bold hover:translate-y-[-2px] transition-all active:scale-95 shadow-sm">
+                Request Connection
+            </button>
+<button class="md:hidden p-2 text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-section-gap lg:pt-48 lg:pb-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-[400px] h-[400px] bg-secondary-container/20 rounded-full blur-[80px]"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container/20 text-on-secondary-container rounded-full mb-6 animate-pulse border border-secondary-container/30">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="text-label-md font-label-md font-bold">Gigabit Fiber Now Available</span>
+</div>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary mb-6 leading-tight">
+                Experience Velocity <br/><span class="text-secondary">Without Limits.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto lg:mx-0">
+                Next-generation fiber optic internet by A1 Online, designed for ultra-low latency gaming, high-definition streaming, and seamless remote work performance.
+            </p>
+<div class="max-w-xl mx-auto lg:mx-0 bg-white p-2 rounded-xl border border-outline-variant shadow-lg flex flex-col sm:flex-row gap-2">
+<div class="flex-1 relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline">location_on</span>
+<input class="w-full pl-12 pr-4 py-3 border-none focus:ring-0 rounded-lg text-body-md font-body-md" placeholder="Enter your area..." type="text"/>
+</div>
+<button class="bg-brand-blue text-white px-8 py-3 rounded-lg font-bold hover:translate-y-[-2px] transition-all active:scale-95 whitespace-nowrap">
+                    Check Availability
+                </button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+<img alt="High speed connectivity" class="w-full h-auto object-cover aspect-[4/3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw4OqKl7fDoTUYI9B8HBbdsrluZ6E91c-ktWVz4rJD-QzCmdIjjiJZ-YiYbUb0k9D1M3qFYEcoGWNYxTepqRuqQ6HUrxo5ZDEVea5XNYh-kwoL5owjFZgrKC4hnw51ok-zMlBtCBkkzZv9jCCrfrXZAV2bXuXnRY-BTv4AuTF8SatH5YI8JIlrDA7eT2Z9vW6D_D5zcnQRfbsS8mlN0R6V2jmMQJhlKXugU0ZyoYXway4uvE6sX-fXxEiBf0C0jZYWSf3cF9KZFQ"/>
+</div>
+<div class="absolute -top-10 -right-10 glass-card p-6 rounded-2xl shadow-xl animate-bounce hidden sm:block" style="animation-duration: 3s;">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<div class="text-label-md font-label-md text-outline">Current Speed</div>
+<div class="text-headline-md font-headline-md leading-none">940<span class="text-body-md font-normal">Mbps</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Tabs -->
+<section class="py-section-gap bg-surface-container-low" id="packages">
+<div class="max-w-container-max mx-auto px-gutter text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Simple, Transparent Pricing</h2>
+<div class="inline-flex p-1 bg-surface-container-high rounded-xl">
+<button class="px-8 py-2.5 rounded-lg font-bold text-label-md transition-all pricing-toggle-active bg-white text-on-surface" id="btn-home" onclick="togglePricing('home')">Residential</button>
+<button class="px-8 py-2.5 rounded-lg font-bold text-label-md transition-all text-on-surface-variant" id="btn-corp" onclick="togglePricing('corp')">Corporate</button>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="pricing-grid">
+<!-- Residential Default Content (6 packages) -->
+<div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+<div class="h-2 bg-outline-variant group-hover:bg-secondary transition-colors"></div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="text-label-md font-label-md text-secondary mb-2 uppercase">Basic</div>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-headline-lg font-headline-lg">10</span>
+<span class="text-on-surface-variant">Mbps</span>
+</div>
+<div class="text-display-xl-mobile font-display-xl-mobile mb-8">$12<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Unlimited Data</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> BDIX Connected</li>
+<li class="flex items-center gap-3 text-on-surface-variant/50 text-body-md"><span class="material-symbols-outlined" style="font-size: 20px;">cancel</span> Real IP</li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+<div class="h-2 bg-brand-green group-hover:bg-secondary transition-colors"></div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="text-label-md font-label-md text-secondary mb-2 uppercase">Starter</div>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-headline-lg font-headline-lg">25</span>
+<span class="text-on-surface-variant">Mbps</span>
+</div>
+<div class="text-display-xl-mobile font-display-xl-mobile mb-8">$19<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Unlimited Data</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Real IP (Available)</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> BDIX Connected</li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+<div class="h-2 bg-secondary group-hover:bg-secondary transition-colors"></div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="text-label-md font-label-md text-secondary mb-2 uppercase">Power</div>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-headline-lg font-headline-lg">40</span>
+<span class="text-on-surface-variant">Mbps</span>
+</div>
+<div class="text-display-xl-mobile font-display-xl-mobile mb-8">$25<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Unlimited Data</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Dedicated Real IP</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> 24/7 Support</li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl border-2 border-secondary overflow-hidden shadow-xl hover:translate-y-[-8px] transition-all flex flex-col relative z-10 lg:scale-105">
+<div class="bg-secondary text-white text-center py-2 text-label-md font-label-md">MOST POPULAR</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="text-label-md font-label-md text-secondary mb-2 uppercase">GIGA-STREAM</div>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-headline-lg font-headline-lg">60</span>
+<span class="text-on-surface-variant">Mbps</span>
+</div>
+<div class="text-display-xl-mobile font-display-xl-mobile mb-8">$35<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Dedicated Real IP</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> 100+ Live TV Channels</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> 24/7 Priority Support</li>
+</ul>
+<button class="w-full py-4 bg-brand-blue text-white rounded-lg font-bold hover:translate-y-[-2px] transition-all shadow-md">Get Started</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+<div class="h-2 bg-brand-orange group-hover:bg-secondary transition-colors"></div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="text-label-md font-label-md text-secondary mb-2 uppercase">Extreme</div>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-headline-lg font-headline-lg">80</span>
+<span class="text-on-surface-variant">Mbps</span>
+</div>
+<div class="text-display-xl-mobile font-display-xl-mobile mb-8">$45<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Multi-Device Streaming</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Optimized FTP Access</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Priority Response</li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+<div class="h-2 bg-primary group-hover:bg-secondary transition-colors"></div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="text-label-md font-label-md text-secondary mb-2 uppercase">Ultimate</div>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-headline-lg font-headline-lg">120</span>
+<span class="text-on-surface-variant">Mbps</span>
+</div>
+<div class="text-display-xl-mobile font-display-xl-mobile mb-8">$59<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Zero Latency Guarantee</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> Multiple Real IPs</li>
+<li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span> White-Glove Support</li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-6">
+<div class="bg-surface-container p-8 rounded-3xl mt-12 hover:bg-brand-blue/10 border border-transparent hover:border-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary mb-4 group-hover:scale-110 transition-transform" style="font-size: 40px;">folder_shared</span>
+<h3 class="font-headline-md text-headline-md mb-2">Media FTP</h3>
+<p class="text-on-surface-variant">Access 100PB+ of movies, software, and games locally at gigabit speeds.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-3xl hover:bg-brand-orange/10 border border-transparent hover:border-brand-orange transition-all cursor-pointer group">
+<span class="material-symbols-outlined brand-orange mb-4 group-hover:scale-110 transition-transform" style="font-size: 40px;">sports_esports</span>
+<h3 class="font-headline-md text-headline-md mb-2">Low Latency</h3>
+<p class="text-on-surface-variant">Sub-5ms ping to major gaming servers for the ultimate competitive edge.</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-surface-container p-8 rounded-3xl hover:bg-brand-green/10 border border-transparent hover:border-brand-green transition-all cursor-pointer group">
+<span class="material-symbols-outlined brand-green mb-4 group-hover:scale-110 transition-transform" style="font-size: 40px;">live_tv</span>
+<h3 class="font-headline-md text-headline-md mb-2">IPTV Pro</h3>
+<p class="text-on-surface-variant">Watch 500+ HD channels with zero buffering on any device in your home.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-3xl mt-12 hover:bg-brand-blue/10 border border-transparent hover:border-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary mb-4 group-hover:scale-110 transition-transform" style="font-size: 40px;">shield_with_heart</span>
+<h3 class="font-headline-md text-headline-md mb-2">Safe Web</h3>
+<p class="text-on-surface-variant">Built-in DDoS protection and malware filtering at the network level.</p>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="font-display-xl text-display-xl-mobile md:text-display-xl">Not Just Internet. <span class="text-secondary">An Ecosystem.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    A1 Online provides more than just a pipe to the world wide web. We deliver a complete digital entertainment and utility suite integrated into your home network.
+                </p>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4 p-6 glass-card rounded-2xl shadow-sm border-l-4 border-l-secondary">
+<div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined">network_check</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">99.9% Uptime SLA</h4>
+<p class="text-body-md text-on-surface-variant">Enterprise-grade reliability for home users, backed by redundant fiber rings.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 glass-card rounded-2xl shadow-sm border-l-4 border-l-brand-blue">
+<div class="w-10 h-10 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue shrink-0">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Human-First Support</h4>
+<p class="text-body-md text-on-surface-variant">No chatbots. Real engineers available via call or chat in under 60 seconds.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Widgets / Shortcuts -->
+<section class="py-16 bg-primary-container text-white overflow-hidden" id="ftp">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2">Digital Shortcuts</h2>
+<p class="text-on-primary-container">Quick access to local network services by A1 Online.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-brand-green rounded-full animate-pulse"></span>
+<span class="text-label-md font-label-md text-on-primary-container">Global Network: Online</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">movie</span>
+</div>
+<span class="material-symbols-outlined text-white/30 group-hover:text-white transition-colors">arrow_outward</span>
+</div>
+<a href="http://emby.aoneonlinebd.net:8096/web/index.html#!/home" target="_blank" class="block">
+
+  <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group">
+
+    <div class="flex justify-between items-start mb-6">
+      <div class="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">movie</span>
+      </div>
+      <span class="material-symbols-outlined text-white/30 group-hover:text-white transition-colors">
+        arrow_outward
+      </span>
+    </div>
+
+    <h3 class="font-bold text-lg mb-1 group-hover:text-secondary transition-colors">
+      A1 FTP Movie
+    </h3>
+
+    <p class="text-sm text-on-primary-container">
+      Latest 4K/UHD releases ready to stream or download.
+    </p>
+
+  </div>
+
+</a>
+</a>
+<p class="text-sm text-on-primary-container">Latest 4K/UHD releases ready to stream or download.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center text-brand-blue">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+</div>
+<span class="material-symbols-outlined text-white/30 group-hover:text-white transition-colors">arrow_outward</span>
+</div>
+<h3 class="font-bold text-lg mb-1">Game Cache</h3>
+<p class="text-sm text-on-primary-container">Steam &amp; Epic updates at LAN speed (1Gbps+).</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group" id="livetv">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-brand-green/20 rounded-xl flex items-center justify-center text-brand-green">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stack</span>
+</div>
+<span class="material-symbols-outlined text-white/30 group-hover:text-white transition-colors">arrow_outward</span>
+</div>
+<a href="http://172.19.178.180/" target="_blank" class="block">
+
+  <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group">
+
+    <h3 class="font-bold text-lg mb-1 group-hover:text-secondary transition-colors">
+        Live Tv
+    </h3>
+
+    <p class="text-sm text-on-primary-container">
+      Cloud-based IPTV player for all devices.
+    </p>
+
+  </div>
+
+</a>
+<p class="text-sm text-on-primary-container">Cloud-based IPTV player for all devices.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-brand-orange/20 rounded-xl flex items-center justify-center brand-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+</div>
+<span class="material-symbols-outlined text-white/30 group-hover:text-white transition-colors">arrow_outward</span>
+</div>
+<h3 class="font-bold text-lg mb-1">Traffic Stats</h3>
+<p class="text-sm text-on-primary-container">Monitor your bandwidth consumption in real-time.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Connection Form -->
+<section class="py-section-gap relative">
+<div class="max-w-[1000px] mx-auto px-gutter">
+<div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-outline-variant">
+<div class="md:w-1/2 p-12 bg-secondary text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined" style="font-size: 200px;">contact_support</span>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Join A1 Online.</h2>
+<p class="text-body-lg mb-8 opacity-90">Ready to transform your home into a high-speed hub? Leave your details and our team will contact you within 2 hours for installation.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">call</span>
+<span>01707076637 </span>
+</div>
+ <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined">call</span>
+            <span>+8809639001111</span>
+        </div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">mail</span>
+<span>support@aoneonlinebd.com</span>
+</div>
+<div class="flex items-center gap-4 mt-2">
+    <span class="material-symbols-outlined">location_on</span>
+    <span>30/10A,Tajmahal road, Mohammadpur, Dhaka, Bangladesh</span>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 p-12">
+<form class="space-y-6">
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" placeholder="Your Name" type="text"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Phone Number</label>
+<input 
+class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all"
+placeholder="01XXXXXXXXX"
+type="tel"
+pattern="[0-9]{11}"
+maxlength="11"
+required
+oninvalid="this.setCustomValidity('Invalid Number')"
+oninput="this.setCustomValidity('')"
+/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Service Area</label>
+<select class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all">
+<option>Select Area</option>
+<option>Mohammadpur</option>
+<option>Adabor</option>
+<option>Dhanmondi</option>
+<option>Mirpur</option>
+<option>Ati Bazar</option>
+<option>Bosila</option>
+<option>Dhaka Uddan</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Desired Plan</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="border border-outline-variant p-3 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-secondary focus:ring-secondary" name="plan" type="radio"/>
+<span>Residential</span>
+</label>
+<label class="border border-outline-variant p-3 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-secondary focus:ring-secondary" name="plan" type="radio"/>
+<span>Business</span>
+</label>
+</div>
+</div>
+<button 
+onclick="window.open('https://wa.me/8801766395683','_blank')"
+class="w-full py-4 bg-brand-blue text-white rounded-lg font-bold hover:translate-y-[-2px] active:scale-95 transition-all shadow-lg mt-4" 
+type="button">
+
+Send Connection Request
+
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-primary-container text-on-surface dark:text-on-primary-fixed">
+<div class="max-w-container-max mx-auto px-gutter py-section-gap grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="mb-6">
+<img alt="A1 Online Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUzLVSdcmW4F46nMy1HusJifb4qhWXihAIkOTZrn7qMs89zNGmj1WbIgcOBr8zBzO9gHcM0iwy4NQS9fMOdRlvkE2nkVV2_jUojPwFezRhMLY2iLaEQRBjqqSxW5MO0douIhZJJlr0X7IwNPByduMkvZcEwkhFgUETBDqDWjDh5dQGxBHXYrqJLQq8QHDyT0_Qv9y_EMfea4ZCQI_qQye7oLOJKbx0IHFwplwv3IAQE5RPumJ1N_7iNaeoOfMjS5YHaCvvmCy17g"/>
+</div>
+<p class="text-on-surface-variant dark:text-on-primary-fixed-variant font-body-md text-body-md mb-6">
+                Pioneering high-speed fiber internet solutions by A1 Online for the next generation of digital excellence.
+            </p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="abousus.html">About Us</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="terms.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="parvicy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Network Status</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Support</a></li>
+<li><a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="acontact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Stay Connected</h4>
+<p class="text-body-md mb-4 text-on-surface-variant dark:text-on-primary-fixed-variant">Join our newsletter for speed updates and tech news.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-high dark:bg-white/5 border-none rounded-lg px-4 py-2 flex-1 focus:ring-1 focus:ring-secondary" placeholder="Email" type="email"/>
+<button class="bg-secondary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-outline-variant/30 text-center text-on-surface-variant dark:text-on-primary-fixed-variant text-label-md">
+        © 2024 A1 Online Communications. All rights reserved.
+    </div>
+</footer>
+<script>
+    function togglePricing(type) {
+        const btnHome = document.getElementById('btn-home');
+        const btnCorp = document.getElementById('btn-corp');
+        const grid = document.getElementById('pricing-grid');
+
+        if (type === 'home') {
+            btnHome.classList.add('pricing-toggle-active', 'bg-white', 'text-on-surface');
+            btnHome.classList.remove('text-on-surface-variant');
+            btnCorp.classList.remove('pricing-toggle-active', 'bg-white', 'text-on-surface');
+            btnCorp.classList.add('text-on-surface-variant');
+            
+            grid.style.opacity = '0';
+            setTimeout(() => {
+                grid.innerHTML = `
+                    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+                        <div class="h-2 bg-outline-variant group-hover:bg-secondary transition-colors"></div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">Bronze</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">20</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳525<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Unlimited Data</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> BDIX Connected</li>
+                                <li class="flex items-center gap-3 text-on-surface-variant/50 text-body-md"><span class="material-symbols-outlined">cancel</span> Real IP</li>
+                            </ul>
+                            <button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+                        <div class="h-2 bg-brand-green group-hover:bg-secondary transition-colors"></div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">Silver</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">35</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳735<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Unlimited Data</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> BDIX Connected</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Real IP (Available)</li>
+                            </ul>
+                            <button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+                        <div class="h-2 bg-secondary group-hover:bg-secondary transition-colors"></div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">Power</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">60</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳1050<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Unlimited Data</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Dedicated Real IP</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> 24/7 Support</li>
+                            </ul>
+                            <button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border-2 border-secondary overflow-hidden shadow-xl hover:translate-y-[-8px] transition-all flex flex-col relative z-10 lg:scale-105">
+                        <div class="bg-secondary text-white text-center py-2 text-label-md font-label-md">MOST POPULAR</div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">GIGA-STREAM</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">80</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳1575<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Dedicated Real IP</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> 100+ Live TV Channels</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> 24/7 Priority Support</li>
+                            </ul>
+                            <button class="w-full py-4 bg-brand-blue text-white rounded-lg font-bold hover:translate-y-[-2px] transition-all shadow-md">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+                        <div class="h-2 bg-brand-orange group-hover:bg-secondary transition-colors"></div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">Extreme</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">100</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳2100<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Multi-Device Streaming</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Optimized FTP Access</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Priority Response</li>
+                            </ul>
+                            <button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+                        <div class="h-2 bg-primary group-hover:bg-secondary transition-colors"></div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">Ultimate</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">150</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳3150<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Zero Latency Guarantee</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Multiple Real IPs</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> White-Glove Support</li>
+                            </ul>
+                            <button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Get Started</button>
+                        </div>
+                    </div>
+                `;
+                grid.style.opacity = '1';
+            }, 150);
+        } else {
+            btnCorp.classList.add('pricing-toggle-active', 'bg-white', 'text-on-surface');
+            btnCorp.classList.remove('text-on-surface-variant');
+            btnHome.classList.remove('pricing-toggle-active', 'bg-white', 'text-on-surface');
+            btnHome.classList.add('text-on-surface-variant');
+            
+            grid.style.opacity = '0';
+            setTimeout(() => {
+                grid.innerHTML = `
+                    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+                        <div class="h-2 bg-brand-blue group-hover:bg-secondary transition-colors"></div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">BUSINESS PRO</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">100</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳20000<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Dedicated Static IP</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> 99.9% Uptime SLA</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Managed Security</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> 24/7 Phone Support</li>
+                            </ul>
+                            <button class="w-full py-4 bg-primary text-white rounded-lg font-bold transition-all shadow-md">Request Proposal</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border-2 border-secondary overflow-hidden shadow-xl hover:translate-y-[-8px] transition-all flex flex-col relative z-10 lg:scale-105">
+                        <div class="bg-secondary text-white text-center py-2 text-label-md font-label-md">ENTERPRISE CORE</div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">ENTERPRISE</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">200</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">৳35000<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Multi-Fiber Redundancy</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Account Manager</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Custom IP Blocks</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> 4-Hour Response SLA</li>
+                            </ul>
+                            <button class="w-full py-4 bg-secondary text-white rounded-lg font-bold transition-all shadow-md">Request Proposal</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden hover:shadow-2xl transition-all duration-300 hover:translate-y-[-8px] group flex flex-col">
+                        <div class="h-2 bg-primary group-hover:bg-secondary transition-colors"></div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="text-label-md font-label-md text-secondary mb-2 uppercase">DEDICATED FIBER</div>
+                            <div class="flex items-baseline gap-1 mb-6"><span class="text-headline-lg font-headline-lg">500</span><span class="text-on-surface-variant">Mbps</span></div>
+                            <div class="text-display-xl-mobile font-display-xl-mobile mb-8">Custom<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+                            <ul class="space-y-4 mb-8 flex-1">
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> 1:8 Symmetrical Speed</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Dark Fiber Ready</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Premium Peering</li>
+                                <li class="flex items-center gap-3 text-body-md"><span class="material-symbols-outlined text-secondary">check_circle</span> Zero Latency Guarantee</li>
+                            </ul>
+                            <button class="w-full py-4 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition-all">Contact Sales</button>
+                        </div>
+                    </div>
+                `;
+                grid.style.opacity = '1';
+            }, 150);
+        }
+    }
+</script>
+
+<script>
+window.onload = function () {
+    togglePricing('home');
+};
+</script>
+</body></html>
