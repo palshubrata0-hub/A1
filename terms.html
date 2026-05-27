@@ -35,18 +35,7 @@
       <a href="terms.html" class="hover:text-blue-600">Services</a>
       <a href="acontact.html" class="hover:text-blue-600">Contact</a>
     </div>
-
-    <!-- Button -->
-    <button class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
-      Get Connected
-    </button>
-
- <!-- Button -->
-<button class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
-  Get Connected
-</button>
-
-<!-- ☰ BUTTON -->
+    <!-- MENU BUTTON -->
 <button onclick="toggleMenu()" class="md:hidden z-50 relative p-2">
   <span class="material-symbols-outlined text-4xl text-slate-800">
     menu
@@ -56,12 +45,16 @@
 <!-- OVERLAY -->
 <div id="menuOverlay"
      class="fixed inset-0 bg-black/50 hidden z-40"
-     onclick="toggleMenu()"></div>
+     onclick="toggleMenu()">
+</div>
 
 <!-- MOBILE SIDEBAR -->
 <div id="mobileMenu"
-     class="fixed top-0 left-0 h-screen w-[85%] bg-white z-50
-            -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
+     class="fixed top-0 left-0 h-screen w-[85%]
+            bg-white z-50
+            -translate-x-full
+            transition-all duration-300 ease-in-out
+            shadow-2xl">
 
   <!-- HEADER -->
   <div class="flex items-center justify-between
@@ -110,6 +103,7 @@
   </div>
 
 </div>
+
 
 </nav>
 
