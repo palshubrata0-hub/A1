@@ -10,6 +10,8 @@
 <title>A1 Online </title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Icon (IMPORTANT) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
   <style>
     body{
@@ -47,18 +49,74 @@
       Get Connected
     </button>
 
-    <!-- Mobile Button -->
-    <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
+    <!-- MENU BUTTON -->
+<button onclick="toggleMenu()" class="md:hidden z-50 relative p-2">
+  <span class="material-symbols-outlined text-4xl text-slate-800">
+    menu
+  </span>
+</button>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"
+     class="fixed inset-0 bg-black/50 hidden z-40"
+     onclick="toggleMenu()">
+</div>
+
+<!-- MOBILE SIDEBAR -->
+<div id="mobileMenu"
+     class="fixed top-0 left-0 h-screen w-[85%]
+            bg-white z-50
+            -translate-x-full
+            transition-all duration-300 ease-in-out
+            shadow-2xl">
+
+  <!-- HEADER -->
+  <div class="flex items-center justify-between
+              px-6 py-6 border-b bg-white">
+
+    <h2 class="text-3xl font-bold text-slate-900">
+      Menu
+    </h2>
+
+    <button onclick="toggleMenu()">
+      <span class="material-symbols-outlined text-[42px] text-gray-500">
+        close
+      </span>
+    </button>
 
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-4">
-    <a href="index.html" class="block py-2">Home</a>
-    <a href="abousus.html" class="block py-2">About</a>
-    <a href="terms.html" class="block py-2">Services</a>
-    <a href="acontact.html" class="block py-2 text-blue-600 font-bold">Contact</a>
+  <!-- MENU ITEMS -->
+  <div class="flex flex-col bg-white pt-6">
+
+    <a href="index.html"
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
+       Home
+    </a>
+
+    <a href="#packages"
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
+       Packages
+    </a>
+
+    <a href="abousus.html"
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
+       About
+    </a>
+
+    <a href="terms.html"
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
+       Services
+    </a>
+
+    <a href="acontact.html"
+       class="px-8 py-5 text-[22px] font-bold text-blue-600">
+       Contact
+    </a>
+
   </div>
+
+</div>
 
 </nav>
 
