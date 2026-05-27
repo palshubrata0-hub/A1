@@ -138,8 +138,8 @@
                 Request Connection
             </button>
 <!-- MENU BUTTON -->
-<button onclick="toggleMenu()" class="md:hidden p-2 z-50 relative">
-  <span class="material-symbols-outlined text-3xl">
+<button onclick="toggleMenu()" class="md:hidden z-50 relative p-2">
+  <span class="material-symbols-outlined text-4xl text-slate-800">
     menu
   </span>
 </button>
@@ -150,22 +150,24 @@
      onclick="toggleMenu()">
 </div>
 
-<!-- MOBILE MENU -->
+<!-- MOBILE SIDEBAR -->
 <div id="mobileMenu"
-     class="fixed top-0 left-0 h-full w-[88%] bg-white z-50
-            transform -translate-x-full
-            transition-transform duration-300 ease-in-out
-            shadow-2xl overflow-y-auto">
+     class="fixed top-0 left-0 h-screen w-[85%]
+            bg-white z-50
+            -translate-x-full
+            transition-all duration-300 ease-in-out
+            shadow-2xl">
 
   <!-- HEADER -->
-  <div class="flex items-center justify-between px-5 py-6 border-b">
+  <div class="flex items-center justify-between
+              px-6 py-6 border-b bg-white">
 
-    <h2 class="text-2xl font-bold text-black">
+    <h2 class="text-3xl font-bold text-slate-900">
       Menu
     </h2>
 
     <button onclick="toggleMenu()">
-      <span class="material-symbols-outlined text-[40px] text-gray-500">
+      <span class="material-symbols-outlined text-[42px] text-gray-500">
         close
       </span>
     </button>
@@ -173,34 +175,36 @@
   </div>
 
   <!-- MENU ITEMS -->
-  <div class="flex flex-col py-4 text-[22px] font-semibold text-slate-700">
+  <div class="flex flex-col bg-white pt-6">
 
     <a href="index.html"
-       class="px-8 py-5 hover:bg-gray-100">
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
        Home
     </a>
 
     <a href="#packages"
-       class="px-8 py-5 hover:bg-gray-100">
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
        Packages
     </a>
 
     <a href="aboutus.html"
-       class="px-8 py-5 hover:bg-gray-100">
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
        About
     </a>
 
     <a href="terms.html"
-       class="px-8 py-5 hover:bg-gray-100">
+       class="px-8 py-5 text-[22px] font-semibold text-slate-700">
        Services
     </a>
 
     <a href="contact.html"
-       class="px-8 py-5 text-blue-600 font-bold hover:bg-gray-100">
+       class="px-8 py-5 text-[22px] font-bold text-blue-600">
        Contact
     </a>
-        </div>
-      </div>
+
+  </div>
+
+</div>
 
   </div>
 
@@ -829,7 +833,7 @@ window.onload = function () {
 </script>
 
      
-!-- SCRIPT -->
+<!-- SCRIPT -->
 <script>
 function toggleMenu() {
 
@@ -837,9 +841,8 @@ function toggleMenu() {
   const overlay = document.getElementById("menuOverlay");
 
   menu.classList.toggle("-translate-x-full");
+
   overlay.classList.toggle("hidden");
 }
 </script>
-
-এখন:
 </body></html>
