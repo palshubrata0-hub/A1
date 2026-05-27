@@ -291,11 +291,13 @@ class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-
 <!-- ================= MOBILE MENU SCRIPT ================= -->
 
 <script>
-
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("hidden");
-}
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
 
+  menu.classList.toggle("-translate-x-full");
+  overlay.classList.toggle("hidden");
+}
 </script>
 
 </body>
